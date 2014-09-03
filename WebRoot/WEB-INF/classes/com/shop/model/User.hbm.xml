@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.shop.model">
+	<class name="User" table="tb_user">
+		<id name="userId">
+			<generator class="native" />
+		</id>
+		<property name="username" type="string" not-null="true" length="255" unique="true"/>
+		<property name="password" type="string" not-null="true"  length="255"/>
+		<property name="addr" type="string" length="255"/>
+		<property name="tel" />
+		<property name="postcode" />
+		<property name="sex"/>
+		<property name="age"/>
+		
+		<set name="shopCarts" inverse="true" cascade="save-update">
+			<key column="userId" />
+			<one-to-many class="ShopCart" />
+		</set>
+		<set name="indents" inverse="true" cascade="save-update">
+			<key column="userId" />
+			<one-to-many class="Indent" />
+		</set>
+	</class>
+</hibernate-mapping>

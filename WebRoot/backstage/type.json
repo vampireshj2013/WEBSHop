@@ -1,0 +1,62 @@
+[
+					{
+						"children":
+							[
+								{"id":"1","text":"木雕"},
+								{"id":"2","text":"牙雕"},
+								{"id":"3","text":"竹雕"},
+								{"id":"4","text":"石雕"}
+							],
+						
+						"state":"closed",
+						"text":"雕刻工艺"
+					},
+					{
+						
+						"children":
+							[
+								{"id":"5","text":"柳条编"},
+								{"id":"6","text":"草编"},
+								{"id":"7","text":"竹编"}
+							],
+						
+						"state":"closed",
+						"text":"编织工艺"
+					},
+					{
+						
+						"children":
+							[
+								{"id":"8","text":"陶瓷"},
+								{"id":"9","text":"景泰蓝"},
+								{"id":"10","text":"唐三彩"},
+								{"id":"11","text":"琉璃"}
+							],
+						
+						"state":"closed",
+						"text":"烧造工艺"
+					}	,
+					{
+						
+						"children":
+							[
+								{"id":"12","text":"铜器"},
+								{"id":"13","text":"金银器"},
+								{"id":"14","text":"锡器"}
+							],
+						"state":"closed",
+						"text":"金属工艺"
+					}	,
+					{
+						
+						"children":
+							[
+								{"id":"15","text":"水晶"},
+								{"id":"16","text":"树脂"},
+								{"id":"17","text":"漆器"},
+								{"id":"18","text":"玻璃"}
+							],
+						"state":"closed",
+						"text":"其他"
+					}	
+]

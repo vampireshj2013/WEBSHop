@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.shop.model">
+	<class name="FirstLevelType" table="tb_first">
+		<id name="firstId">
+			<generator class="native" />
+		</id>
+		<property name="typenName" type="string" length="255"/>
+		<property name="level" length="5"/>
+		
+		
+		
+		
+		<many-to-one name="secondLevelType" column="secondId" cascade="save-update" class="SecondLevelType" />
+		<set name="products" cascade="save-update" >
+			<key column="firstId" />
+			<one-to-many class="Product" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.shop.model">
+	<class name="Product" table="tb_product">
+		<id name="productId">
+			<generator class="native" />
+		</id>
+		<property name="pictureFileName" />
+		<property name="price" type="double" />
+		<property name="productName" unique="true"/>
+		<property name="scans"/>
+		<property name="simplyIntro" type="string" length="2048"/>
+		<property name="brand" type="string" length="100"/>
+		<property name="carrDate" />
+		<property name="craft"/>
+		<property name="size" />
+		<property name="faceCraft" />
+		<property name="totals"/>
+		<property name="logo" />
+		<property name="manuDate" />
+		<property name="materia" />
+		<property name="pack" />
+		<property name="proAddr" />
+		<property name="remain" type="integer" />
+		<many-to-one name="type" column="firstId" cascade="save-update" class="FirstLevelType" />
+		<set name="indents" cascade="save-update" inverse="true">
+			<key column="productId" />
+			<one-to-many class="Indent" />
+		</set>
+		
+	</class>
+</hibernate-mapping>

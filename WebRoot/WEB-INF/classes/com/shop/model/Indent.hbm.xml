@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.shop.model">
+	<class name="Indent" table="tb_indent">
+		<id name="indentId">
+			<generator class="native" />
+		</id>
+		<property name="addr" />
+		<property name="postcode" />
+		<property name="message" />
+		<property name="tel" type="string"/>
+		<property name="count"></property>
+		<property name="totalPrice"></property>
+		
+		
+		<many-to-one name="product" column="productId" cascade="save-update" class="Product" />
+		<many-to-one name="user" column="userId" cascade="save-update" class="User" />
+		
+	</class>
+</hibernate-mapping>

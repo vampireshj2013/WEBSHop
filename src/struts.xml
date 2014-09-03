@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 将Bean交给Spring管理 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="default" namespace="/" extends="struts-default" >
+		
+	 	<global-results>  
+		<result name="exception" type="">exception.jsp</result>
+		<result name="index">/foreground/index.jsp</result>
+		</global-results>  
+		<global-exception-mappings>  
+		<exception-mapping exception="java.lang.Exception" result="exception"/>  
+		</global-exception-mappings>
+		<action name="modifyUser_*" class="modifyUser" method="{1}">
+			<result name = "modify">/foreground/modifyuser.jsp</result>
+		</action>
+		<action name="index_*" class="indexAction" method="{1}">
+			<result name = "index">/foreground/index.jsp</result>
+			
+		</action>
+		<action name="indentAction_*" class="indentAction" method="{1}">
+			<result name = "indentInit">/backstage/indent.jsp</result>
+			<result name = "detailaddr">/foreground/detailaddr.jsp</result>
+			<result name = "foreindent">/foreground/indent.jsp</result>
+		</action>
+		<action name="typeAction_*" class="typeAction" method="{1}">
+			<result name="type">/type.jsp</result>
+			<result name="ahead">/ahead.jsp</result>
+			<result name="addproduct">/addproduct.jsp</result>
+		</action>
+		<action name="proAction_*" class="proAction" method="{1}">
+			<result name="search">foreground/search.jsp</result>
+			<result name="searchRes">foreground/searchRes.jsp</result>
+			<result name="addproduct">/backstage/addproduct.jsp</result>
+			<result name="p_m">product_manager.jsp</result>
+			<result name="promg">/backstage/promg.jsp</result>
+			<result name="modify">/backstage/promodify.jsp</result>
+			<result name="prodetail">/foreground/prodetail.jsp</result>
+		</action>
+		<action name="userAction_*" class="userAction" method="{1}">
+		<result name="index">/foreground/index.jsp</result>
+		<result name="login">foreground/login.jsp</result>
+		<result name="register">foreground/reg.jsp</result>
+		<result name="registersuccess">foreground/regsuccess.jsp</result>
+		<result name="usermg">/backstage/usermg.jsp</result>
+		</action>
+		<action name="cartAction_*" class="cartAction" method="{1}">
+		<result name="cart">/foreground/cart.jsp</result>
+		<result name = "detailaddr">/foreground/detailaddr.jsp</result>
+		</action>
+	</package>
+
+</struts>
