@@ -1,5 +1,5 @@
-2014年毕业设计
-  前台使用jquery,easyui,bootstrap框架。
-  后台代码使用spring,hibernate.struts
-  使用声明式事物
-  MySQL数据库
+2014年毕业设计<br>
+  前台使用jquery,easyui,bootstrap框架。<br>
+  后台代码使用spring,hibernate.struts<br>
+  使用声明式事物<br>
+  MySQL数据库<br>
