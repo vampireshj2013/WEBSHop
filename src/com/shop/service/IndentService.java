@@ -51,7 +51,7 @@ public class IndentService {
 	 * 在jsp页面上控制按钮是否可用
 	 * @param indentId
 	 */
-	public void  changeIndentForUser(int indentId){indentDao.changeIndentForUser(indentId);}
+	public void   changeIndentForUser(int indentId){indentDao.changeIndentForUser(indentId);}
 	public void changeIndentForAdmin(int indentId){indentDao.changeIndentForAdmin(indentId);}
 	public List<Indent> findIndentByUsername(String username){return indentDao.findIndentByUsername(username);}
 	public List<Indent> findAllIndentsByUser(User user,int firstResult,int maxResult){
